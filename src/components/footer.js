@@ -4,7 +4,7 @@ import { Box } from "@rebass/grid"
 
 const Webfooter = styled.footer`
   padding: 75px 0;
-  background: #000;
+  background: #2a2a30;
   color: #fff;
 `
 const Container = styled.div`

@@ -72,7 +72,7 @@ const Mouse = styled.div`
       background: #000;
       border-radius: 50%;
       margin: 15% auto auto auto;
-      animation: ${scrollinner} 1.5s ease infinite;
+      animation:p${scrollinner} 1.5s ease infinite;
     }
   }
 `

@@ -23,18 +23,30 @@ const Image = styled.img`
 
 const Tile = styled.div`
   position: relative;
+  width: 50%;
+  heigth: 100%;
   overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   &:hover ${Overlay} {
     opacity: 0.5;
   }
   &:hover ${Image} {
     transform: scale(1.1);
   }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:nth-child(odd) {
+    margin-bottom: 60px;
+  }
+  &:nth-child(even) {
+    margin-top: 90px;
+  }
 `
 
 const Work = () => (
   <Tile>
-    <a href="projects/tach-group">
+    <a href="static/projects/tach-group">
       <Image src={require("../images/gatsby-astronaut.png")} alt="" />
       <Overlay>
         <p>dasdasd</p>

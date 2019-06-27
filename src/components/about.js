@@ -30,7 +30,7 @@ const FlexContainer = styled(Flex)`
     font-weight: 600;
   }
   img {
-    margin: 22px;
+    margin: 22px 30px;
     flex: 0 0 auto;
     max-width: 100%;
   }
@@ -41,7 +41,6 @@ FlexContainer.defaultProps = {
 const Description = styled.p`
   text-align: justify;
   font-size: 20px;
-  font-weight: 300;
   line-height: 1.5;
   color: #2d2d43;
 `

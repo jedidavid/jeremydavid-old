@@ -21,25 +21,11 @@ const Works = () => (
     <Container>
       <h2>Featured works</h2>
       <Flex flexWrap="wrap">
-        <Box px={2} py={2} width={1 / 2}>
-          <Work />
-        </Box>
-        <Box px={2} py={2} width={1 / 2}>
-          <Flex flexWrap="wrap">
-            <Box px={2} py={2} width={1 / 2}>
-              1/4
-            </Box>
-            <Box px={2} py={2} width={1 / 2}>
-              1/4
-            </Box>
-            <Box px={2} py={2} width={1 / 2}>
-              1/4
-            </Box>
-            <Box px={2} py={2} width={1 / 2}>
-              1/4
-            </Box>
-          </Flex>
-        </Box>
+        <Work />
+        <Work />
+        <Work />
+        <Work />
+        <Work />
       </Flex>
     </Container>
   </React.Fragment>
