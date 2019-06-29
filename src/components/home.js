@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Flex, Box } from "@rebass/grid"
-import { jumping, scrollinner, scrollmouse } from "./animations"
+import { jumping, scrolling } from "./animations"
 import dev from "../images/code.svg"
 import circle from "../images/circle.svg"
 const Container = styled.div`
@@ -50,29 +50,43 @@ const Jump = styled.div`
   }
 `
 
-const Mouse = styled.div`
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(0, -50%);
-  display: block;
-  .mouse {
-    position: relative;
-    margin: 0 auto;
-    display: block;
-    width: 1.5em;
-    height: 2.25em;
-    border: solid 2px #000;
-    border-radius: 25px;
-    animation: ${scrollmouse} 1.5s infinite;
-    .scroll-down {
+const Scroll = styled.div`
+  position: relative;
+  span {
+    &.text {
+      transform: rotate(-90deg);
+      transform-origin: bottom left;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #000;
+      letter-spacing: 1px;
+      font-size: 14px;
+      line-height: 1;
+      vertical-align: top;
+    }
+    &.scrolldown {
+      width: 1px;
+      height: 60px;
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    &.line {
+      width: 100%;
+      height: 100%;
       display: block;
-      width: 0.3125em;
-      height: 0.3125em;
-      background: #000;
-      border-radius: 50%;
-      margin: 15% auto auto auto;
-      animation:p${scrollinner} 1.5s ease infinite;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 0) 50%
+      );
+      background-position: 0 -60px;
+      background-size: 100% 200%;
+      animation: ${scrolling} 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards
+        infinite;
     }
   }
 `
@@ -108,11 +122,12 @@ const Home = () => (
         </Box>
       </Flex>
     </Holder>
-    <Mouse>
-      <div className="mouse">
-        <span className="scroll-down" />
-      </div>
-    </Mouse>
+    <Scroll>
+      <span className="scrolldown">
+        <span className="line" />
+      </span>
+      <span className="text">Scroll</span>
+    </Scroll>
   </Container>
 )
 

@@ -1,58 +1,44 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { Flex, Box } from "@rebass/grid"
+import Works from "./works"
 
-const Overlay = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: #262626;
-`
-const Image = styled.img`
-  display: block;
-  max-width: 100%;
-  height: auto;
-  transition: 0.4s ease;
-`
-
-const Tile = styled.div`
-  position: relative;
-  width: 50%;
-  heigth: 100%;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  &:hover ${Overlay} {
-    opacity: 0.5;
-  }
-  &:hover ${Image} {
-    transform: scale(1.1);
-  }
-  &:first-child {
-    margin-top: 0;
-  }
-  &:nth-child(odd) {
-    margin-bottom: 60px;
-  }
-  &:nth-child(even) {
-    margin-top: 90px;
+const Container = styled(Box)`
+  max-width: 1400px;
+  h2 {
+    padding: 50px 0;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Poppins";
+    font-weight: 600;
   }
 `
+Container.defaultProps = {
+  mx: "auto",
+}
 
 const Work = () => (
-  <Tile>
-    <a href="static/projects/tach-group">
-      <Image src={require("../images/gatsby-astronaut.png")} alt="" />
-      <Overlay>
-        <p>dasdasd</p>
-      </Overlay>
-    </a>
-  </Tile>
+  <React.Fragment>
+    <Container>
+      <h2>Featured works</h2>
+      <Flex flexWrap="wrap">
+        <Box width={1 / 2}>
+          <Works
+            projectName="Tach"
+            subtitle="Frontend Development"
+            img="Tach"
+          />
+          <Works projectName="Le Septentrion" subtitle="Web Development" />
+          <Works projectName="Plentyfull" subtitle="Frontend Development" />
+        </Box>
+        <Box width={1 / 2}>
+          <Works projectName="Cosco" subtitle="Frontend Development" />
+          <Works projectName="Fabrik" subtitle="React" />
+          <Works projectName="Caticatures" subtitle="Shopify" />
+        </Box>
+      </Flex>
+    </Container>
+  </React.Fragment>
 )
 
 export default Work

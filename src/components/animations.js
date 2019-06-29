@@ -120,31 +120,16 @@ const jumping4 = keyframes`
     opacity: .9;
   }
 `
-
-const scrollinner = keyframes`
-  from {
-    margin-top: 15%;
+const scrolling = keyframes`
+  0%  {
+    background-position: 0 -60px;
   }
-  to {
-    margin-top: 50%;
+  75% {
+    background-position: 0 0;
   }
-`
-const scrollmouse = keyframes`
-  from {
-    margin-top: 0;
-  }
-  to {
-    margin-top: 15px;
+  100%{
+    background-position: 0 60px;
   }
 `
 
-export {
-  rotate,
-  zoom,
-  jumping,
-  jumping2,
-  jumping3,
-  jumping4,
-  scrollinner,
-  scrollmouse,
-}
+export { rotate, zoom, jumping, jumping2, jumping3, jumping4, scrolling }
