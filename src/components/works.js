@@ -3,8 +3,16 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 const Holder = styled.div`
-  h3 {
-    font-size: 28px;
+  .text-holder {
+    padding: 10px 0 40px;
+    h3 {
+      font-size: 1.75rem;
+      line-height: 1.2;
+    }
+    p {
+      font-size: 1rem;
+      color: #404040;
+    }
   }
 `
 const Overlay = styled.div`
@@ -17,7 +25,7 @@ const Overlay = styled.div`
   height: 100%;
   opacity: 0;
   transition: 0.5s ease;
-  background-color: #262626;
+  background-color: #202121;
 `
 const Image = styled.img`
   display: block;
@@ -45,13 +53,15 @@ const Works = props => {
   return (
     <Holder>
       <Tile>
-        <a href="static/projects/tach-group/index.html">
-          <Image src={require(`../images/tach.jpg`)} alt="" />
+        <a href={props.link}>
+          <Image src={require(`../images/${props.imgSrc}.jpg`)} alt="" />
           <Overlay />
         </a>
       </Tile>
-      <h3>{props.projectName}</h3>
-      <h4>{props.subtitle}</h4>
+      <div className="text-holder">
+        <h3>{props.projectName}</h3>
+        <p>{props.subtitle}</p>
+      </div>
     </Holder>
   )
 }

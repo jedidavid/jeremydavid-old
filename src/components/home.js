@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { Flex, Box } from "@rebass/grid"
-import { jumping, scrolling } from "./animations"
+import { SolidButton } from "./button"
+import { jumping } from "./animations"
 import dev from "../images/code.svg"
 import circle from "../images/circle.svg"
 const Container = styled.div`
@@ -22,7 +23,6 @@ const Tagline = styled.div`
   z-index: 1;
   h1 {
     font-size: 5rem;
-    font-family: "Poppins";
     font-weight: 600;
     line-height: 1.2;
   }
@@ -47,47 +47,6 @@ const Jump = styled.div`
   transition: all 0.9s ease 5s;
   img {
     width: 30%;
-  }
-`
-
-const Scroll = styled.div`
-  position: relative;
-  span {
-    &.text {
-      transform: rotate(-90deg);
-      transform-origin: bottom left;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #000;
-      letter-spacing: 1px;
-      font-size: 14px;
-      line-height: 1;
-      vertical-align: top;
-    }
-    &.scrolldown {
-      width: 1px;
-      height: 60px;
-      position: absolute;
-      bottom: 20px;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      overflow: hidden;
-    }
-    &.line {
-      width: 100%;
-      height: 100%;
-      display: block;
-      background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 1) 50%,
-        rgba(0, 0, 0, 0) 50%
-      );
-      background-position: 0 -60px;
-      background-size: 100% 200%;
-      animation: ${scrolling} 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards
-        infinite;
-    }
   }
 `
 
@@ -116,18 +75,13 @@ const Home = () => (
               and a lot of coffee.
             </h1>
           </Tagline>
+          <SolidButton>View works</SolidButton>
         </Box>
         <Box>
           <HeroImg src={dev} alt="" />
         </Box>
       </Flex>
     </Holder>
-    <Scroll>
-      <span className="scrolldown">
-        <span className="line" />
-      </span>
-      <span className="text">Scroll</span>
-    </Scroll>
   </Container>
 )
 

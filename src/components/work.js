@@ -8,8 +8,7 @@ const Container = styled(Box)`
   h2 {
     padding: 50px 0;
     text-align: center;
-    font-size: 30px;
-    font-family: "Poppins";
+    font-size: 2rem;
     font-weight: 600;
   }
 `
@@ -17,25 +16,51 @@ Container.defaultProps = {
   mx: "auto",
 }
 
+const LeftBox = styled(Box)`
+  padding: 0 25px;
+`
+const RightBox = styled(Box)`
+  padding: 0 25px;
+`
 const Work = () => (
   <React.Fragment>
     <Container>
       <h2>Featured works</h2>
       <Flex flexWrap="wrap">
-        <Box width={1 / 2}>
+        <LeftBox width={1 / 2}>
           <Works
             projectName="Tach"
             subtitle="Frontend Development"
-            img="Tach"
+            imgSrc="tach"
+            link="https://www.tach-group.com"
           />
-          <Works projectName="Le Septentrion" subtitle="Web Development" />
-          <Works projectName="Plentyfull" subtitle="Frontend Development" />
-        </Box>
-        <Box width={1 / 2}>
-          <Works projectName="Cosco" subtitle="Frontend Development" />
-          <Works projectName="Fabrik" subtitle="React" />
-          <Works projectName="Caticatures" subtitle="Shopify" />
-        </Box>
+          <Works
+            projectName="Le Septentrion"
+            subtitle="Web Development"
+            imgSrc="septentrion"
+            link="https://www.septentrion.fr/"
+          />
+          <Works
+            projectName="Plentyfull"
+            subtitle="Web Development"
+            imgSrc="plentyfull"
+            link="#"
+          />
+        </LeftBox>
+        <RightBox width={1 / 2}>
+          <Works
+            projectName="Panda"
+            subtitle="React"
+            imgSrc="panda"
+            link="https://la-fabrik-panda.netlify.com"
+          />
+          <Works
+            projectName="Caticatures"
+            subtitle="Shopify"
+            imgSrc="caticatures"
+            link="https://caticatures.com/"
+          />
+        </RightBox>
       </Flex>
     </Container>
   </React.Fragment>

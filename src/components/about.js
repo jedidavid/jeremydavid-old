@@ -1,14 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { Flex, Box } from "@rebass/grid"
-
 const Container = styled(Box)`
   max-width: 1100px;
   h2 {
     padding: 50px 0;
     text-align: center;
-    font-size: 30px;
-    font-family: "Poppins";
+    font-size: 2rem;
     font-weight: 600;
   }
 `
@@ -26,7 +24,6 @@ const FlexContainer = styled(Flex)`
     width: 100%;
     text-align: center;
     font-size: 28px;
-    font-family: "Poppins";
     font-weight: 600;
   }
   img {
@@ -40,9 +37,9 @@ FlexContainer.defaultProps = {
 }
 const Description = styled.p`
   text-align: justify;
-  font-size: 20px;
+  font-size: 1.1rem;
   line-height: 1.5;
-  color: #2d2d43;
+  color: #404040;
 `
 const About = () => (
   <React.Fragment>

@@ -7,14 +7,14 @@ const Container = styled(Box)`
   h2 {
     padding: 50px 0 20px;
     text-align: center;
-    font-size: 30px;
-    font-family: "Poppins";
+    font-size: 2rem;
     font-weight: 600;
   }
   p {
-    font-size: 18px;
+    font-size: 1.1rem;
     margin-bottom: 25px;
     text-align: center;
+    color: #404040;
   }
   a {
     text-decoration: none;
@@ -29,6 +29,9 @@ const Input = styled.input`
   width: 100%;
   max-width: 550px;
   border: 1px solid #d8d8d8;
+  &::placeholder {
+    font-size: 0.75rem;
+  }
 `
 const Textarea = styled.textarea`
   display: block;
@@ -37,6 +40,9 @@ const Textarea = styled.textarea`
   width: 100%;
   max-width: 550px;
   border: 1px solid #d8d8d8;
+  &::placeholder {
+    font-size: 0.75rem;
+  }
 `
 const Image = styled.img`
   max-width: 100%;

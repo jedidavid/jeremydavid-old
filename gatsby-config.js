@@ -31,7 +31,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Poppins: 500, 600", "Nunito: 200"],
+          families: ["Poppins: 500, 600, 700", "Open Sans: 300, 400"],
         },
       },
     },

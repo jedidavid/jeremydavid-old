@@ -120,16 +120,5 @@ const jumping4 = keyframes`
     opacity: .9;
   }
 `
-const scrolling = keyframes`
-  0%  {
-    background-position: 0 -60px;
-  }
-  75% {
-    background-position: 0 0;
-  }
-  100%{
-    background-position: 0 60px;
-  }
-`
 
-export { rotate, zoom, jumping, jumping2, jumping3, jumping4, scrolling }
+export { rotate, zoom, jumping, jumping2, jumping3, jumping4 }
