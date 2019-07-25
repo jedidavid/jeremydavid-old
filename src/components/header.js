@@ -127,7 +127,6 @@ class Header extends Component {
     this.state = { isToggle: false, isDisabled: false }
 
     this.handleClick = this.handleClick.bind(this)
-    this.handleScroll = this.handleScroll.bind(this)
   }
 
   handleClick() {
@@ -140,18 +139,6 @@ class Header extends Component {
       isDisabled: !isDisabled,
     }))
   }
-
-  // fixed header
-
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll, true)
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll)
-  }
-
-  handleScroll(event) {}
 
   render() {
     return (

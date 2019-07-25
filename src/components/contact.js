@@ -46,10 +46,7 @@ const Textarea = styled.textarea`
     font-size: 0.75rem;
   }
 `
-const Image = styled.img`
-  max-width: 100%;
-  height: auto;
-`
+
 Container.defaultProps = {
   mx: "auto",
 }

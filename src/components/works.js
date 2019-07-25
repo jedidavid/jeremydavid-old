@@ -51,7 +51,7 @@ const Works = props => {
   return (
     <Holder>
       <Tile>
-        <a href={props.link} target="_blank">
+        <a href={props.link}>
           <Image src={require(`../images/${props.imgSrc}.jpg`)} alt="" />
           <Overlay />
         </a>
