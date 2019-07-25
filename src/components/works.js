@@ -48,11 +48,10 @@ const Tile = styled.div`
 `
 
 const Works = props => {
-  console.log(props)
   return (
     <Holder>
       <Tile>
-        <a href={props.link}>
+        <a href={props.link} target="_blank">
           <Image src={require(`../images/${props.imgSrc}.jpg`)} alt="" />
           <Overlay />
         </a>

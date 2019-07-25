@@ -151,9 +151,7 @@ class Header extends Component {
     window.removeEventListener("scroll", this.handleScroll)
   }
 
-  handleScroll(event) {
-    console.log(event)
-  }
+  handleScroll(event) {}
 
   render() {
     return (
