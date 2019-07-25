@@ -1,24 +1,24 @@
 import React from "react"
 import styled from "styled-components"
 import { Flex, Box } from "@rebass/grid"
-import { Button } from "./button"
+import Title from "./title"
+import Button from "./button"
+import Fade from "react-reveal/Fade"
 const Container = styled(Box)`
-  max-width: 800px;
-  h2 {
-    padding: 50px 0 20px;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 600;
-  }
+  max-width: 1400px;
   p {
-    font-size: 1.1rem;
-    margin-bottom: 25px;
-    text-align: center;
-    color: #404040;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    font-size: 2rem;
+    color: #202331;
   }
   a {
     text-decoration: none;
-    color: #8c43ff;
+    color: #7a3997;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `
 const Input = styled.input`
@@ -29,6 +29,7 @@ const Input = styled.input`
   width: 100%;
   max-width: 550px;
   border: 1px solid #d8d8d8;
+  background: transparent;
   &::placeholder {
     font-size: 0.75rem;
   }
@@ -40,6 +41,7 @@ const Textarea = styled.textarea`
   width: 100%;
   max-width: 550px;
   border: 1px solid #d8d8d8;
+  background: transparent;
   &::placeholder {
     font-size: 0.75rem;
   }
@@ -52,32 +54,41 @@ Container.defaultProps = {
   mx: "auto",
 }
 
+const FlexWrapper = styled(Flex)`
+  margin: 2.5em auto;
+  width: 100%;
+  max-width: 1200px;
+`
 const Contact = () => (
-  <React.Fragment>
+  <div id="contact" className="section-contact">
     <Container>
-      <h2>Get in touch</h2>
-      <p>
-        Got a question? Need a website? Send me a message below or email me at
-        <a href="mailto:jeremydb.david@gmail.com">
-          {" "}
-          jeremydb.david@gmail.com{" "}
-        </a>{" "}
-        and I'll respond as soon as possible.
-      </p>
-      <Flex flexWrap="wrap">
+      <Fade>
+        <Title data-num="03">Get in Touch</Title>
+        <p>
+          Got a question? Need a website? Send me a message below or email me at
+          <a href="mailto:jeremydb.david@gmail.com">
+            {" "}
+            jeremydb.david@gmail.com{" "}
+          </a>{" "}
+          and I'll respond as soon as possible.
+        </p>
+      </Fade>
+      <FlexWrapper flexWrap="wrap">
         <Box width={1}>
-          <form name="contact" method="POST" data-netlify="true">
-            <Flex flexDirection="column">
-              <Input type="text" name="" id="" placeholder="Name" />
-              <Input type="email" name="" id="" placeholder="Email" />
-              <Textarea name="" id="" rows="10" placeholder="Message" />
-              <Button type="submit">Submit</Button>
-            </Flex>
-          </form>
+          <Fade>
+            <form name="contact" method="POST" data-netlify="true">
+              <Flex flexDirection="column">
+                <Input type="text" name="" id="" placeholder="Name" />
+                <Input type="email" name="" id="" placeholder="Email" />
+                <Textarea name="" id="" rows="10" placeholder="Message" />
+                <Button type="submit">Submit</Button>
+              </Flex>
+            </form>
+          </Fade>
         </Box>
-      </Flex>
+      </FlexWrapper>
     </Container>
-  </React.Fragment>
+  </div>
 )
 
 export default Contact

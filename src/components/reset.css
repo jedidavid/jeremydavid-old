@@ -18,6 +18,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  background: #f3f1f0;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -41,11 +42,11 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: "Poppins", -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  font-family: "Roboto", -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
   text-rendering: optimizeLegibility;
 }
 p,a, input, textarea {
-  font-family: "Open Sans", -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  font-family: "Source Sans Pro", -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
 }
 
 article, aside, details, figcaption, figure, 

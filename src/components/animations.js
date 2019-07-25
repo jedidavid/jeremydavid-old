@@ -121,4 +121,15 @@ const jumping4 = keyframes`
   }
 `
 
-export { rotate, zoom, jumping, jumping2, jumping3, jumping4 }
+const fadeInRight = keyframes`
+  0% {
+    left: 20%;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+`
+
+export { rotate, zoom, jumping, jumping2, jumping3, jumping4, fadeInRight }

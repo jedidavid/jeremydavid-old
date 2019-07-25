@@ -1,16 +1,15 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
 
 const Holder = styled.div`
   .text-holder {
-    padding: 10px 0 40px;
+    padding: 20px 0 30px;
     h3 {
-      font-size: 1.75rem;
+      font-size: 1.1rem;
       line-height: 1.2;
     }
     p {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: #404040;
     }
   }
@@ -25,7 +24,7 @@ const Overlay = styled.div`
   height: 100%;
   opacity: 0;
   transition: 0.5s ease;
-  background-color: #202121;
+  background-color: #f3f1f0;
 `
 const Image = styled.img`
   display: block;

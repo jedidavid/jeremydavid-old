@@ -1,11 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { Box } from "@rebass/grid"
-import gatsby from "../images/gatsby.svg"
+import { FiMail, FiGithub, FiLinkedin } from "react-icons/fi"
+
 const Webfooter = styled.footer`
   padding: 50px 0;
-  background: #2a2a30;
-  color: #fff;
+  background: #202331;
+  color: #f3f1f0;
   img {
     width: 80px;
   }
@@ -24,10 +25,14 @@ const Container = styled.div`
   max-width: 1100px;
 `
 const Link = styled.a`
-  padding: 0 40px;
-  font-size: 1rem;
+  padding: 0 20px;
+  font-size: 1.5rem;
   text-decoration: none;
-  color: #fff;
+  color: #f3f1f0;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: #7c97bf;
+  }
 `
 const ContentBox = styled(Box)`
   text-align: center;
@@ -40,14 +45,18 @@ const Footer = () => (
     <Container>
       <ContentBox width={1}>
         <div className="social-icons">
-          <Link href="#">Github</Link>
-          <Link href="#">LinkedIn</Link>
-          <Link href="#">Email</Link>
+          <Link href="#">
+            <FiMail />
+          </Link>
+          <Link href="#">
+            <FiLinkedin />
+          </Link>
+          <Link href="#">
+            <FiGithub />
+          </Link>
         </div>
         <p className="copyright">Copyright © 2019, Jeremy David </p>
-        <p className="made">
-          Made with <img src={gatsby} alt="" />
-        </p>
+        <p className="made">Made with GatsbyJS</p>
       </ContentBox>
     </Container>
   </Webfooter>

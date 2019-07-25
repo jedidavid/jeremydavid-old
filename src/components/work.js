@@ -1,16 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { Flex, Box } from "@rebass/grid"
+import Title from "./title"
 import Works from "./works"
+import Fade from "react-reveal/Fade"
 
 const Container = styled(Box)`
   max-width: 1400px;
-  h2 {
-    padding: 50px 0;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 600;
-  }
 `
 Container.defaultProps = {
   mx: "auto",
@@ -23,47 +19,54 @@ const RightBox = styled(Box)`
   padding: 0 25px;
 `
 const Work = () => (
-  <React.Fragment>
+  <div id="work" className="section-work">
     <Container>
-      <h2>Featured works</h2>
+      <Fade>
+        <Title data-num="01">Featured works</Title>
+      </Fade>
       <Flex flexWrap="wrap">
         <LeftBox width={1 / 2}>
-          <Works
-            projectName="Tach"
-            subtitle="Frontend Development"
-            imgSrc="tach"
-            link="https://www.tach-group.com"
-          />
-          <Works
-            projectName="Le Septentrion"
-            subtitle="Web Development"
-            imgSrc="septentrion"
-            link="https://www.septentrion.fr/"
-          />
-          <Works
-            projectName="Plentyfull"
-            subtitle="Web Development"
-            imgSrc="plentyfull"
-            link="#"
-          />
+          <Fade>
+            <Works
+              projectName="Caticatures"
+              subtitle="Shopify"
+              imgSrc="caticatures"
+              link="https://caticatures.com/"
+            />
+
+            <Works
+              projectName="Plentyfull"
+              subtitle="Frontend Development"
+              imgSrc="plentyfull"
+              link="#"
+            />
+            <Works
+              projectName="Le Septentrion"
+              subtitle="Frontend Development"
+              imgSrc="septentrion"
+              link="https://www.septentrion.fr/"
+            />
+          </Fade>
         </LeftBox>
         <RightBox width={1 / 2}>
-          <Works
-            projectName="Panda"
-            subtitle="React"
-            imgSrc="panda"
-            link="https://la-fabrik-panda.netlify.com"
-          />
-          <Works
-            projectName="Caticatures"
-            subtitle="Shopify"
-            imgSrc="caticatures"
-            link="https://caticatures.com/"
-          />
+          <Fade>
+            <Works
+              projectName="Panda"
+              subtitle="React"
+              imgSrc="panda"
+              link="https://la-fabrik-panda.netlify.com"
+            />
+            <Works
+              projectName="Tach"
+              subtitle="Frontend Development"
+              imgSrc="tach"
+              link="https://www.tach-group.com"
+            />
+          </Fade>
         </RightBox>
       </Flex>
     </Container>
-  </React.Fragment>
+  </div>
 )
 
 export default Work
