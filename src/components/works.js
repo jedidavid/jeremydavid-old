@@ -14,18 +14,7 @@ const Holder = styled.div`
     }
   }
 `
-const Overlay = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: #f3f1f0;
-`
+
 const Image = styled.img`
   display: block;
   max-width: 100%;
@@ -39,11 +28,11 @@ const Tile = styled.div`
   heigth: 100%;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  &:hover ${Overlay} {
-    opacity: 0.5;
-  }
-  &:hover ${Image} {
-    transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.025);
   }
 `
 
@@ -53,7 +42,6 @@ const Works = props => {
       <Tile>
         <a href={props.link}>
           <Image src={require(`../images/${props.imgSrc}.jpg`)} alt="" />
-          <Overlay />
         </a>
       </Tile>
       <div className="text-holder">

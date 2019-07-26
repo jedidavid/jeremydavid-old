@@ -27,10 +27,14 @@ const Logo = styled(Link)`
 `
 
 const Container = styled.div`
-  padding: 40px 15px;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1600px;
+  padding-top: 40px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media screen and (min-width: 1600px) {
+    max-width: 1600px;
+  }
 `
 
 const MenuWrapper = styled.div`
@@ -45,12 +49,12 @@ const CustomBurger = styled(Burger)`
   &&& {
     font-size: 8px;
     .burger-lines {
-      background-color: #000;
+      background-color: #202331;
       height: 0.4em;
       border-radius: 0.4em;
       &:before,
       &:after {
-        background-color: #000;
+        background-color: #202331;
         height: 0.4em;
         border-radius: 0.4em;
       }
@@ -59,7 +63,7 @@ const CustomBurger = styled(Burger)`
       .burger-lines {
         &:before,
         &:after {
-          background-color: #faf9f8 !important;
+          background-color: #f3f1f0;
         }
       }
     }
@@ -76,7 +80,7 @@ const Overlay = styled.div`
   transition: opacity 0.35s, visibility 0.35s, height 0.35s;
   overflow: hidden;
   z-index: 3;
-  background: #7a3997;
+  background: #202331;
 
   &.open {
     opacity: 1;
@@ -115,7 +119,8 @@ const MenuOverlay = styled.nav`
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 0.75;
     }
   }

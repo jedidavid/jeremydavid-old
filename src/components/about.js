@@ -4,7 +4,23 @@ import { Flex, Box } from "@rebass/grid"
 import Title from "./title"
 import Fade from "react-reveal/Fade"
 const Container = styled(Box)`
-  max-width: 1400px;
+  width: 100%;
+  @media screen and (min-width: 1450px) {
+    max-width: 1400px;
+  }
+
+  @media (min-width: 1200px) and (max-width: 1449px) {
+    max-width: 1140px;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    max-width: 960px;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    max-width: 720px;
+  }
+  @media (min-width: 576px) and (max-width: 767px) {
+    max-width: 540px;
+  }
   p {
     margin: 0 auto;
     width: 100%;
@@ -15,6 +31,7 @@ const Container = styled(Box)`
 `
 Container.defaultProps = {
   mx: "auto",
+  px: "15px",
 }
 const FlexContainer = styled(Flex)`
   max-width: 1200px;

@@ -30,7 +30,8 @@ const Link = styled.a`
   text-decoration: none;
   color: #f3f1f0;
   transition: all 0.3s ease-in-out;
-  &:hover {
+  &:hover,
+  &:focus {
     color: #7c97bf;
   }
 `
@@ -45,13 +46,13 @@ const Footer = () => (
     <Container>
       <ContentBox width={1}>
         <div className="social-icons">
-          <Link href="#">
+          <Link href="mailto:jeremydb.david@gmail.com">
             <FiMail />
           </Link>
-          <Link href="#">
+          <Link href="https://www.linkedin.com/in/jeremydaynieldavid/">
             <FiLinkedin />
           </Link>
-          <Link href="#">
+          <Link href="https://github.com/jedidavid">
             <FiGithub />
           </Link>
         </div>

@@ -27,7 +27,8 @@ const Home = styled(Link)`
   font-family: "Roboto";
   font-weight: 700;
   color: #595186;
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.8;
   }
 `
