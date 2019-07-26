@@ -9,7 +9,7 @@ import Contact from "../components/contact"
 const IndexPage = () => (
   <div>
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Jeremy David" keywords={[`gatsby`, `application`, `react`]} />
       <Landing />
       <Works />
       <About />
