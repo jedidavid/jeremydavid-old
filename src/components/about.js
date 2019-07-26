@@ -8,25 +8,47 @@ const Container = styled(Box)`
   @media screen and (min-width: 1450px) {
     max-width: 1400px;
   }
-
-  @media (min-width: 1200px) and (max-width: 1449px) {
-    max-width: 1140px;
-  }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    max-width: 960px;
-  }
-  @media (min-width: 768px) and (max-width: 991px) {
-    max-width: 720px;
-  }
-  @media (min-width: 576px) and (max-width: 767px) {
-    max-width: 540px;
-  }
   p {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
     font-size: 2rem;
     color: #202331;
+  }
+
+  @media (min-width: 1200px) and (max-width: 1449px) {
+    max-width: 1140px;
+    p {
+      max-width: 1040px;
+      font-size: 1.6rem;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    max-width: 960px;
+    p {
+      max-width: 860px;
+      font-size: 1.6rem;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    max-width: 720px;
+    p {
+      max-width: 620px;
+      font-size: 1.5rem;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767px) {
+    max-width: 540px;
+    p {
+      max-width: 440px;
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    p {
+      max-width: 280px;
+      font-size: 1.4rem;
+    }
   }
 `
 Container.defaultProps = {
@@ -50,6 +72,28 @@ const FlexContainer = styled(Flex)`
     margin: 22px 30px;
     flex: 0 0 auto;
     max-width: 100%;
+    max-height: 40px;
+  }
+  @media (min-width: 1200px) and (max-width: 1449px) {
+    max-width: 1040px;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    max-width: 860px;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    max-width: 620px;
+  }
+  @media (min-width: 576px) and (max-width: 767px) {
+    max-width: 440px;
+    img {
+      margin: 8px 10px;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    max-width: 280px;
+    img {
+      margin: 4px 10px;
+    }
   }
 `
 FlexContainer.defaultProps = {
@@ -74,18 +118,18 @@ const About = () => (
     <FlexContainer>
       <Fade>
         <h3>Technologies I work with:</h3>
-        <img src={require("../images/html5.svg")} alt="" width="45" />
-        <img src={require("../images/css.svg")} alt="" width="45" />
-        <img src={require("../images/bootstrap.svg")} alt="" width="45" />
-        <img src={require("../images/sass.svg")} alt="" width="55" />
-        <img src={require("../images/javascript.svg")} alt="" width="75" />
-        <img src={require("../images/jquery.svg")} alt="" width="135" />
-        <img src={require("../images/react.svg")} alt="" width="115" />
-        <img src={require("../images/gatsby.svg")} alt="" width="175" />
-        <img src={require("../images/git.svg")} alt="" width="95" />
-        <img src={require("../images/php.svg")} alt="" width="75" />
-        <img src={require("../images/wordpress.svg")} alt="" width="155" />
-        <img src={require("../images/shopify.svg")} alt="" width="155" />
+        <img src={require("../images/html5.svg")} alt="" />
+        <img src={require("../images/css.svg")} alt="" />
+        <img src={require("../images/bootstrap.svg")} alt="" />
+        <img src={require("../images/sass.svg")} alt="" />
+        <img src={require("../images/javascript.svg")} alt="" />
+        <img src={require("../images/jquery.svg")} alt="" />
+        <img src={require("../images/react.svg")} alt="" />
+        <img src={require("../images/gatsby.svg")} alt="" />
+        <img src={require("../images/git.svg")} alt="" />
+        <img src={require("../images/php.svg")} alt="" />
+        <img src={require("../images/wordpress.svg")} alt="" />
+        <img src={require("../images/shopify.svg")} alt="" />
       </Fade>
     </FlexContainer>
   </div>

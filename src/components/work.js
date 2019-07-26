@@ -1,11 +1,14 @@
 import React from "react"
 import styled, { ThemeProvider } from "styled-components"
-import theme from "./theme"
 
 import { Flex, Box } from "@rebass/grid"
 import Title from "./title"
 import Works from "./works"
 import Fade from "react-reveal/Fade"
+
+const theme = {
+  breakpoints: ["62em", "75em"],
+}
 
 const Container = styled(Box)`
   width: 100%;
@@ -46,7 +49,7 @@ const Work = props => (
           <Title data-num="01">Featured works</Title>
         </Fade>
         <Flex flexWrap="wrap">
-          <LeftBox width={[1, 1 / 2, 1 / 2]}>
+          <LeftBox width={[1, 1 / 2]}>
             <Fade>
               <Works
                 projectName="Caticatures"
@@ -69,7 +72,7 @@ const Work = props => (
               />
             </Fade>
           </LeftBox>
-          <RightBox width={[1, 1 / 2, 1 / 2]}>
+          <RightBox width={[1, 1 / 2]}>
             <Fade>
               <Works
                 projectName="Panda"

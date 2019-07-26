@@ -9,19 +9,6 @@ const Container = styled(Box)`
   @media screen and (min-width: 1450px) {
     max-width: 1400px;
   }
-
-  @media (min-width: 1200px) and (max-width: 1449px) {
-    max-width: 1140px;
-  }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    max-width: 960px;
-  }
-  @media (min-width: 768px) and (max-width: 991px) {
-    max-width: 720px;
-  }
-  @media (min-width: 576px) and (max-width: 767px) {
-    max-width: 540px;
-  }
   p {
     margin: 0 auto;
     width: 100%;
@@ -37,35 +24,76 @@ const Container = styled(Box)`
       text-decoration: underline;
     }
   }
+  @media (min-width: 1200px) and (max-width: 1449px) {
+    max-width: 1140px;
+    p {
+      max-width: 1040px;
+      font-size: 1.6rem;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    max-width: 960px;
+    p {
+      max-width: 860px;
+      font-size: 1.6rem;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    max-width: 720px;
+    p {
+      max-width: 620px;
+      font-size: 1.5rem;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767px) {
+    max-width: 540px;
+    p {
+      max-width: 440px;
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    p {
+      max-width: 280px;
+      font-size: 1.4rem;
+    }
+  }
 `
 const Input = styled.input`
   display: block;
+  align-self: center;
   padding: 0 20px;
-  margin: 0 auto 20px;
+  margin: 0 0 20px;
   height: 40px;
-  width: 100%;
-  max-width: 550px;
   border: 1px solid #d8d8d8;
   background: transparent;
   &::placeholder {
     font-size: 0.75rem;
   }
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    max-width: 550px;
+  }
 `
 const Textarea = styled.textarea`
   display: block;
+  align-self: center;
   padding: 10px 20px 0;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 550px;
+  margin: 0;
   border: 1px solid #d8d8d8;
   background: transparent;
   &::placeholder {
     font-size: 0.75rem;
+  }
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    max-width: 550px;
   }
 `
 
 Container.defaultProps = {
   mx: "auto",
+  px: "15px",
 }
 
 const FlexWrapper = styled(Flex)`
