@@ -122,6 +122,7 @@ const Contact = () => (
           <Fade>
             <form name="contact" method="POST" data-netlify="true">
               <Flex flexDirection="column">
+                <input type="hidden" name="form-name" value="contact" />
                 <Input type="text" name="name" placeholder="Name" />
                 <Input type="email" name="email" placeholder="Email" required />
                 <Textarea
