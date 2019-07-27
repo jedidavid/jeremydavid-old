@@ -1,9 +1,12 @@
-import React from "react"
+import React, { Component } from "react"
 import styled from "styled-components"
 import { Flex, Box } from "@rebass/grid"
 import Title from "./title"
 import Button from "./button"
 import Fade from "react-reveal/Fade"
+import axios from "axios"
+import * as qs from "query-string"
+
 const Container = styled(Box)`
   width: 100%;
   @media screen and (min-width: 1450px) {
@@ -103,42 +106,102 @@ const FlexWrapper = styled(Flex)`
   width: 100%;
   max-width: 1200px;
 `
-const Contact = () => (
-  <div id="contact" className="section-contact">
-    <Container>
-      <Fade>
-        <Title data-num="03">Get in Touch</Title>
-        <p>
-          Got a question? Need a website? Send me a message below or email me at
-          <a href="mailto:jeremydb.david@gmail.com">
-            {" "}
-            jeremydb.david@gmail.com{" "}
-          </a>{" "}
-          and I'll respond as soon as possible.
-        </p>
-      </Fade>
-      <FlexWrapper flexWrap="wrap">
-        <Box width={1}>
+
+class Contact extends Component {
+  constructor(props) {
+    super(props)
+    this.domRef = React.createRef()
+    this.state = { feedbackMsg: null }
+  }
+
+  handleSubmit(event) {
+    event.preventDefault()
+
+    const formData = {}
+
+    Object.keys(this.refs).map(key => (formData[key] = this.refs[key].value))
+
+    const axiosOptions = {
+      url: this.props.location.pathname,
+      method: "post",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      data: qs.stringify(formData),
+    }
+
+    axios(axiosOptions)
+      .then(response => {
+        this.setState({
+          feedbackMsg: "Form submitted successfully!",
+        })
+        this.domRef.current.reset()
+      })
+      .catch(err =>
+        this.setState({
+          feedbackMsg: "Form could not be submitted.",
+        })
+      )
+  }
+  render() {
+    return (
+      <div id="contact" className="section-contact">
+        <Container>
           <Fade>
-            <form name="contact" method="POST" data-netlify="true">
-              <Flex flexDirection="column">
-                <input type="hidden" name="form-name" value="contact" />
-                <Input type="text" name="name" placeholder="Name" />
-                <Input type="email" name="email" placeholder="Email" required />
-                <Textarea
-                  name="message"
-                  rows="10"
-                  placeholder="Message"
-                  required
-                />
-                <Button type="submit">Submit</Button>
-              </Flex>
-            </form>
+            <Title data-num="03">Get in Touch</Title>
+            <p>
+              Got a question? Need a website? Send me a message below or email
+              me at
+              <a href="mailto:jeremydb.david@gmail.com">
+                {" "}
+                jeremydb.david@gmail.com{" "}
+              </a>{" "}
+              and I'll respond as soon as possible.
+            </p>
           </Fade>
-        </Box>
-      </FlexWrapper>
-    </Container>
-  </div>
-)
+          <FlexWrapper flexWrap="wrap">
+            <Box width={1}>
+              <Fade>
+                {this.state.feedbackMsg && <p>{this.state.feedbackMsg}</p>}
+
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  ref={this.domRef}
+                >
+                  <Flex flexDirection="column">
+                    <input type="hidden" name="bot-field" />
+                    <input type="hidden" name="form-name" value="contact" />
+                    <Input
+                      type="text"
+                      name="name"
+                      placeholder="Name"
+                      ref="name"
+                    />
+                    <Input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      ref="email"
+                      required
+                    />
+                    <Textarea
+                      name="message"
+                      rows="10"
+                      placeholder="Message"
+                      ref="message"
+                      required
+                    />
+                    <Button type="submit">Submit</Button>
+                  </Flex>
+                </form>
+              </Fade>
+            </Box>
+          </FlexWrapper>
+        </Container>
+      </div>
+    )
+  }
+}
 
 export default Contact
