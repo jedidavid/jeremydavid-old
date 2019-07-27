@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, keywords, title }) {
             title
             description
             author
+            image
           }
         }
       }
@@ -38,6 +39,10 @@ function SEO({ description, lang, meta, keywords, title }) {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `image`,
+          content: site.siteMetadata.image,
         },
         {
           property: `og:title`,
@@ -86,6 +91,7 @@ SEO.defaultProps = {
   meta: [],
   keywords: [],
   description: ``,
+  image: ``,
 }
 
 SEO.propTypes = {
@@ -94,6 +100,7 @@ SEO.propTypes = {
   meta: PropTypes.arrayOf(PropTypes.object),
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
+  image: PropTypes.string,
 }
 
 export default SEO
