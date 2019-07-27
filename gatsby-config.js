@@ -4,7 +4,7 @@ module.exports = {
     description: `This is my portfolio`,
     author: `Jeremy David`,
     url: `https://www.jeremydavid.dev/`,
-    image: `icon.svg`,
+    image: `logo.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
