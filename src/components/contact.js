@@ -111,7 +111,7 @@ class Contact extends Component {
   constructor(props) {
     super(props)
     this.domRef = React.createRef()
-    this.state = { feedbackMsg: null }
+    this.state = { feedbackMsg: "" }
   }
 
   handleSubmit(event) {
