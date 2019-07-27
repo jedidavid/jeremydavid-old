@@ -123,8 +123,13 @@ const Contact = () => (
             <form name="contact" method="POST" data-netlify="true">
               <Flex flexDirection="column">
                 <Input type="text" name="name" placeholder="Name" />
-                <Input type="email" name="email" placeholder="Email" />
-                <Textarea name="message" rows="10" placeholder="Message" />
+                <Input type="email" name="email" placeholder="Email" required />
+                <Textarea
+                  name="message"
+                  rows="10"
+                  placeholder="Message"
+                  required
+                />
                 <Button type="submit">Submit</Button>
               </Flex>
             </form>
