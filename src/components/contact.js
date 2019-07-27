@@ -61,9 +61,11 @@ const Container = styled(Box)`
 `
 const Input = styled.input`
   display: block;
+  box-sizing: border-box;
   align-self: center;
   padding: 0 20px;
   margin: 0 0 20px;
+  width: 100%;
   height: 40px;
   border: 1px solid #d8d8d8;
   background: transparent;
@@ -71,22 +73,22 @@ const Input = styled.input`
     font-size: 0.75rem;
   }
   @media screen and (min-width: 768px) {
-    width: 100%;
     max-width: 550px;
   }
 `
 const Textarea = styled.textarea`
   display: block;
+  box-sizing: border-box;
   align-self: center;
   padding: 10px 20px 0;
   margin: 0;
+  width: 100%;
   border: 1px solid #d8d8d8;
   background: transparent;
   &::placeholder {
     font-size: 0.75rem;
   }
   @media screen and (min-width: 768px) {
-    width: 100%;
     max-width: 550px;
   }
 `
@@ -120,9 +122,9 @@ const Contact = () => (
           <Fade>
             <form name="contact" method="POST" data-netlify="true">
               <Flex flexDirection="column">
-                <Input type="text" name="" id="" placeholder="Name" />
-                <Input type="email" name="" id="" placeholder="Email" />
-                <Textarea name="" id="" rows="10" placeholder="Message" />
+                <Input type="text" name="name" placeholder="Name" />
+                <Input type="email" name="email" placeholder="Email" />
+                <Textarea name="message" rows="10" placeholder="Message" />
                 <Button type="submit">Submit</Button>
               </Flex>
             </form>
