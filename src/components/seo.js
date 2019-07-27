@@ -65,11 +65,11 @@ function SEO({ description, lang, meta, keywords, title, url, image }) {
         },
         {
           name: `og:url`,
-          content: site.siteMetadata.url,
+          property: site.siteMetadata.url,
         },
         {
           name: `og:image`,
-          content: metaImage,
+          property: metaImage,
         },
         {
           name: `twitter:card`,
