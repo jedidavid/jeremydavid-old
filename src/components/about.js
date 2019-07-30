@@ -91,8 +91,10 @@ const FlexContainer = styled(Flex)`
   }
   @media screen and (max-width: 575px) {
     max-width: 280px;
+    justify-content: space-between;
     img {
       margin: 4px 10px;
+      max-height: 30px;
     }
   }
 `
@@ -118,11 +120,11 @@ const About = () => (
     <FlexContainer>
       <Fade>
         <h3>Technologies I work with:</h3>
-        <img src={require("../images/html5.svg")} alt="" />
+        <img src={require("../images/html.svg")} alt="" />
         <img src={require("../images/css.svg")} alt="" />
-        <img src={require("../images/bootstrap.svg")} alt="" />
-        <img src={require("../images/sass.svg")} alt="" />
         <img src={require("../images/javascript.svg")} alt="" />
+        <img src={require("../images/sass.svg")} alt="" />
+        <img src={require("../images/bootstrap.svg")} alt="" />
         <img src={require("../images/jquery.svg")} alt="" />
         <img src={require("../images/react.svg")} alt="" />
         <img src={require("../images/gatsby.svg")} alt="" />

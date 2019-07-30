@@ -77,8 +77,10 @@ const Tagline = styled.div`
 `
 
 const HeroImg = styled.img`
+  position: relative;
   max-width: 100%;
   height: auto;
+  z-index: 10;
   @media (min-width: 768px) and (max-width: 991px) {
   }
 `
