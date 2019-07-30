@@ -11,7 +11,7 @@ import disableScroll from "disable-scroll"
 const Nav = styled.header`
   position: absolute;
   width: 100%;
-  z-index: 10;
+  z-index: 15;
 `
 const Logo = styled(Link)`
   font-size: 1rem;
@@ -40,7 +40,7 @@ const Container = styled.div`
 const MenuWrapper = styled.div`
   position: relative;
   margin-left: auto;
-  z-index: 5;
+  z-index: 12;
   &.scroll {
     position: fixed;
   }
