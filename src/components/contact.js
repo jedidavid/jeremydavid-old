@@ -69,12 +69,18 @@ const Input = styled.input`
   width: 100%;
   height: 40px;
   border: 1px solid #d8d8d8;
+  font-size: 1rem;
   background: transparent;
+  color: #202331;
   &::placeholder {
     font-size: 0.75rem;
   }
   @media screen and (min-width: 768px) {
     max-width: 550px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0 10px;
+    font-size: 0.75rem;
   }
 `
 const Textarea = styled.textarea`
@@ -85,12 +91,18 @@ const Textarea = styled.textarea`
   margin: 0;
   width: 100%;
   border: 1px solid #d8d8d8;
+  font-size: 1rem;
   background: transparent;
+  color: #202331;
   &::placeholder {
     font-size: 0.75rem;
   }
   @media screen and (min-width: 768px) {
     max-width: 550px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0 10px;
+    font-size: 0.75rem;
   }
 `
 
