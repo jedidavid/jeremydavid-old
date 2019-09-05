@@ -39,6 +39,7 @@ const Link = styled.a`
 const ContentBox = styled(Box)`
   text-align: center;
   .social-icons {
+    display: inline-flex;
     margin-bottom: 1rem;
   }
 `

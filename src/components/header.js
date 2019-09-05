@@ -153,7 +153,7 @@ class Header extends Component {
             <Logo to="/" className={this.state.isToggle ? "active" : ""}>
               jeremy david
             </Logo>
-            <MenuWrapper className={this.state.scrolling ? "scroll" : ""}>
+            <MenuWrapper>
               <CustomBurger
                 onClick={this.handleClick}
                 isOpen={this.state.isToggle}
