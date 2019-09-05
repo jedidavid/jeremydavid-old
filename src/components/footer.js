@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { Box } from "@rebass/grid"
-import { FiMail, FiGithub, FiLinkedin } from "react-icons/fi"
+import { FiMail, FiGithub, FiLinkedin, FiFile } from "react-icons/fi"
+import ReactTooltip from "react-tooltip"
 
 const Webfooter = styled.footer`
   padding: 50px 0;
@@ -46,14 +47,37 @@ const Footer = () => (
     <Container>
       <ContentBox width={1}>
         <div className="social-icons">
-          <Link href="mailto:jeremydb.david@gmail.com">
+          <Link
+            href="mailto:jeremydb.david@gmail.com"
+            data-tip
+            data-for="email"
+          >
             <FiMail />
+            <ReactTooltip id="email" type="light" effect="solid">
+              Email
+            </ReactTooltip>
           </Link>
-          <Link href="https://www.linkedin.com/in/jeremydaynieldavid/">
+          <Link
+            href="https://www.linkedin.com/in/jeremydaynieldavid/"
+            data-tip
+            data-for="linkedin"
+          >
             <FiLinkedin />
+            <ReactTooltip id="linkedin" type="light" effect="solid">
+              LinkedIn
+            </ReactTooltip>
           </Link>
-          <Link href="https://github.com/jedidavid">
+          <Link href="https://github.com/jedidavid" data-tip data-for="github">
             <FiGithub />
+            <ReactTooltip id="github" type="light" effect="solid">
+              Github
+            </ReactTooltip>
+          </Link>
+          <Link href={"CV.pdf"} target="_blank" data-tip data-for="cv">
+            <FiFile />
+            <ReactTooltip id="cv" type="light" effect="solid">
+              CV
+            </ReactTooltip>
           </Link>
         </div>
         <p className="copyright">Copyright © 2019, Jeremy David </p>
