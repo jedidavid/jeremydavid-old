@@ -37,8 +37,8 @@ module.exports = {
         name: `Jeremy David`,
         short_name: `Portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#7a3997`,
+        theme_color: `#7a3997`,
         display: `minimal-ui`,
         icon: `src/images/icon.svg`, // This path is relative to the root of the site.
       },
