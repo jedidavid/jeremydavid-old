@@ -123,7 +123,8 @@ const Contact = () => (
       <Fade>
         <Title data-num="03">Get in Touch</Title>
         <p>
-          Got a question? Need a website? Send me a message below or email me at
+          Hire me? Got a question? Need a website? Send me a message below or
+          email me at
           <a href="mailto:jeremydb.david@gmail.com">
             {" "}
             jeremydb.david@gmail.com{" "}
