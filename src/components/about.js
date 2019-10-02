@@ -132,6 +132,8 @@ const About = () => (
         <img src={require("../images/php.svg")} alt="" />
         <img src={require("../images/wordpress.svg")} alt="" />
         <img src={require("../images/shopify.svg")} alt="" />
+        <img src={require("../images/nodejs.svg")} alt="" />
+        <img src={require("../images/mongodb.svg")} alt="" />
       </Fade>
     </FlexContainer>
   </div>
