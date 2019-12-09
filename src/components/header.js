@@ -99,6 +99,9 @@ const Overlay = styled.div`
       &:nth-of-type(4) {
         animation-delay: 0.5s;
       }
+      &:nth-of-type(5) {
+        animation-delay: 0.55s;
+      }
     }
   }
 `
@@ -188,6 +191,9 @@ class Header extends Component {
                 >
                   Contact
                 </Link>
+                <a href={"CV.pdf"} target="_blank" onClick={this.handleClick}>
+                  CV
+                </a>
               </MenuOverlay>
             </Overlay>
           </Flex>
