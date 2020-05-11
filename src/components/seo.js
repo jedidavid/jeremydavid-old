@@ -27,10 +27,6 @@ function SEO({ description, lang, meta, keywords, title, url, image }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-
-  const metaImage = `${site.siteMetadata.url}${site.siteMetadata.image}`
-
   return (
     <Helmet
       htmlAttributes={{
@@ -41,7 +37,7 @@ function SEO({ description, lang, meta, keywords, title, url, image }) {
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: site.siteMetadata.description,
         },
         {
           name: `url`,
@@ -49,7 +45,7 @@ function SEO({ description, lang, meta, keywords, title, url, image }) {
         },
         {
           name: `image`,
-          content: metaImage,
+          content: site.siteMetadata.image,
         },
         {
           property: `og:title`,
@@ -57,7 +53,7 @@ function SEO({ description, lang, meta, keywords, title, url, image }) {
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: site.siteMetadata.description,
         },
         {
           property: `og:type`,
@@ -69,7 +65,7 @@ function SEO({ description, lang, meta, keywords, title, url, image }) {
         },
         {
           property: `og:image`,
-          content: metaImage,
+          content: site.siteMetadata.image,
         },
         {
           name: `twitter:card`,
@@ -85,11 +81,11 @@ function SEO({ description, lang, meta, keywords, title, url, image }) {
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: site.siteMetadata.description,
         },
         {
           name: `twitter:image`,
-          content: metaImage,
+          content: site.siteMetadata.image,
         },
       ]
         .concat(
