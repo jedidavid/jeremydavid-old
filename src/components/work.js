@@ -1,6 +1,6 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import styled, { ThemeProvider } from "styled-components"
-
 import { Flex, Box } from "@rebass/grid"
 import Title from "./title"
 import Works from "./works"
@@ -41,57 +41,99 @@ const LeftBox = styled(Box)`
 const RightBox = styled(Box)`
   padding: 0 25px;
 `
-const Work = props => (
-  <div id="work" className="section-work">
-    <ThemeProvider theme={theme}>
-      <Container>
-        <Fade>
-          <Title data-num="01">Featured works</Title>
-        </Fade>
-        <Flex flexWrap="wrap">
-          <LeftBox width={[1, 1 / 2]}>
-            <Fade>
-              <Works
-                projectName="Caticatures"
-                subtitle="Shopify"
-                imgSrc="caticatures"
-                link="https://caticatures.com/"
-              />
+const Work = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      image1: file(relativePath: { eq: "caticatures.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      image2: file(relativePath: { eq: "plentyfull.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      image3: file(relativePath: { eq: "septentrion.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      image4: file(relativePath: { eq: "panda.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      image5: file(relativePath: { eq: "tach.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
 
-              <Works
-                projectName="Plentyfull"
-                subtitle="Frontend Development"
-                imgSrc="plentyfull"
-                link="#"
-              />
-              <Works
-                projectName="Le Septentrion"
-                subtitle="Frontend Development"
-                imgSrc="septentrion"
-                link="https://www.septentrion.fr/"
-              />
-            </Fade>
-          </LeftBox>
-          <RightBox width={[1, 1 / 2]}>
-            <Fade>
-              <Works
-                projectName="Panda"
-                subtitle="React"
-                imgSrc="panda"
-                link="https://la-fabrik-panda.netlify.com"
-              />
-              <Works
-                projectName="Tach"
-                subtitle="Frontend Development"
-                imgSrc="tach"
-                link="https://www.tach-group.com"
-              />
-            </Fade>
-          </RightBox>
-        </Flex>
-      </Container>
-    </ThemeProvider>
-  </div>
-)
+  return (
+    <div id="work" className="section-work">
+      <ThemeProvider theme={theme}>
+        <Container>
+          <Fade>
+            <Title data-num="01">Featured works</Title>
+          </Fade>
+          <Flex flexWrap="wrap">
+            <LeftBox width={[1, 1 / 2]}>
+              <Fade>
+                <Works
+                  projectName="Caticatures"
+                  subtitle="Shopify"
+                  imgSrc={data.image1.childImageSharp.fluid}
+                  link="https://caticatures.com/"
+                />
+
+                <Works
+                  projectName="Plentyfull"
+                  subtitle="Frontend Development"
+                  imgSrc={data.image2.childImageSharp.fluid}
+                  link="#"
+                />
+                <Works
+                  projectName="Le Septentrion"
+                  subtitle="Frontend Development"
+                  imgSrc={data.image3.childImageSharp.fluid}
+                  link="https://www.septentrion.fr/"
+                />
+              </Fade>
+            </LeftBox>
+            <RightBox width={[1, 1 / 2]}>
+              <Fade>
+                <Works
+                  projectName="Panda"
+                  subtitle="React"
+                  imgSrc={data.image4.childImageSharp.fluid}
+                  link="https://la-fabrik-panda.netlify.com"
+                />
+                <Works
+                  projectName="Tach"
+                  subtitle="Frontend Development"
+                  imgSrc={data.image5.childImageSharp.fluid}
+                  link="https://www.tach-group.com"
+                />
+              </Fade>
+            </RightBox>
+          </Flex>
+        </Container>
+      </ThemeProvider>
+    </div>
+  )
+}
 
 export default Work

@@ -1,4 +1,5 @@
 import React from "react"
+import Img from "gatsby-image"
 import styled from "styled-components"
 
 const Holder = styled.div`
@@ -15,7 +16,7 @@ const Holder = styled.div`
   }
 `
 
-const Image = styled.img`
+const Image = styled(Img)`
   display: block;
   max-width: 100%;
   height: auto;
@@ -41,7 +42,7 @@ const Works = props => {
     <Holder>
       <Tile>
         <a href={props.link}>
-          <Image src={require(`../images/${props.imgSrc}.jpg`)} alt="" />
+          <Image fluid={props.imgSrc} alt="" />
         </a>
       </Tile>
       <div className="text-holder">
