@@ -74,7 +74,13 @@ const Footer = () => (
               Github
             </ReactTooltip>
           </Link>
-          <Link href={"CV.pdf"} target="_blank" data-tip data-for="cv">
+          <Link
+            href={"CV.pdf"}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-tip
+            data-for="cv"
+          >
             <FiFile />
             <ReactTooltip id="cv" type="light" effect="solid">
               CV

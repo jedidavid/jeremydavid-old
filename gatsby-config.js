@@ -3,7 +3,6 @@ module.exports = {
     title: `Web Developer`,
     description: `This is my portfolio`,
     author: `Jeremy David`,
-    url: `https://www.jeremydavid.dev/`,
     image: `logo.png`,
   },
   plugins: [
