@@ -18,6 +18,7 @@ function SEO({ lang, meta, keywords, title }) {
           siteMetadata {
             title
             description
+            url
             author
             image
           }
@@ -26,7 +27,7 @@ function SEO({ lang, meta, keywords, title }) {
     `
   )
 
-  const imageUrl = `${window.location.href}${site.siteMetadata.image}`
+  const imageUrl = `${site.siteMetadata.url}/${site.siteMetadata.image}`
   return (
     <Helmet
       htmlAttributes={{
@@ -41,7 +42,7 @@ function SEO({ lang, meta, keywords, title }) {
         },
         {
           name: `url`,
-          content: window.location.href,
+          content: site.siteMetadata.url,
         },
         {
           name: `image`,
@@ -61,7 +62,7 @@ function SEO({ lang, meta, keywords, title }) {
         },
         {
           property: `og:url`,
-          content: window.location.href,
+          content: site.siteMetadata.url,
         },
         {
           property: `og:image`,

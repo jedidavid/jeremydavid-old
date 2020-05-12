@@ -3,6 +3,7 @@ module.exports = {
     title: `Web Developer`,
     description: `This is my portfolio`,
     author: `Jeremy David`,
+    url: `https://jeremydavid.netlify.app`,
     image: `logo.png`,
   },
   plugins: [
