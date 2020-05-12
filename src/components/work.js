@@ -4,7 +4,6 @@ import styled, { ThemeProvider } from "styled-components"
 import { Flex, Box } from "@rebass/grid"
 import Title from "./title"
 import Works from "./works"
-import Fade from "react-reveal/Fade"
 
 const theme = {
   breakpoints: ["62em", "75em"],
@@ -86,48 +85,42 @@ const Work = () => {
     <div id="work" className="section-work">
       <ThemeProvider theme={theme}>
         <Container>
-          <Fade>
-            <Title data-num="01">Featured works</Title>
-          </Fade>
+          <Title data-num="01">Featured works</Title>
           <Flex flexWrap="wrap">
             <LeftBox width={[1, 1 / 2]}>
-              <Fade>
-                <Works
-                  projectName="Caticatures"
-                  subtitle="Shopify"
-                  imgSrc={data.image1.childImageSharp.fluid}
-                  link="https://caticatures.com/"
-                />
+              <Works
+                projectName="Caticatures"
+                subtitle="Shopify"
+                imgSrc={data.image1.childImageSharp.fluid}
+                link="https://caticatures.com/"
+              />
 
-                <Works
-                  projectName="Plentyfull"
-                  subtitle="Frontend Development"
-                  imgSrc={data.image2.childImageSharp.fluid}
-                  link="#"
-                />
-                <Works
-                  projectName="Le Septentrion"
-                  subtitle="Frontend Development"
-                  imgSrc={data.image3.childImageSharp.fluid}
-                  link="https://www.septentrion.fr/"
-                />
-              </Fade>
+              <Works
+                projectName="Plentyfull"
+                subtitle="Frontend Development"
+                imgSrc={data.image2.childImageSharp.fluid}
+                link="#"
+              />
+              <Works
+                projectName="Le Septentrion"
+                subtitle="Frontend Development"
+                imgSrc={data.image3.childImageSharp.fluid}
+                link="https://www.septentrion.fr/"
+              />
             </LeftBox>
             <RightBox width={[1, 1 / 2]}>
-              <Fade>
-                <Works
-                  projectName="Panda"
-                  subtitle="React"
-                  imgSrc={data.image4.childImageSharp.fluid}
-                  link="https://la-fabrik-panda.netlify.com"
-                />
-                <Works
-                  projectName="Tach"
-                  subtitle="Frontend Development"
-                  imgSrc={data.image5.childImageSharp.fluid}
-                  link="https://www.tach-group.com"
-                />
-              </Fade>
+              <Works
+                projectName="Panda"
+                subtitle="React"
+                imgSrc={data.image4.childImageSharp.fluid}
+                link="https://la-fabrik-panda.netlify.com"
+              />
+              <Works
+                projectName="Tach"
+                subtitle="Frontend Development"
+                imgSrc={data.image5.childImageSharp.fluid}
+                link="https://www.tach-group.com"
+              />
             </RightBox>
           </Flex>
         </Container>

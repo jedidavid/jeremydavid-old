@@ -1,11 +1,11 @@
 import PropTypes from "prop-types"
 import React, { Component } from "react"
+import { Link } from "gatsby"
 import { Flex } from "@rebass/grid"
 import styled from "styled-components"
 import Burger from "@animated-burgers/burger-slide"
 import "@animated-burgers/burger-slide/dist/styles.css"
 import { fadeInRight } from "./animations"
-import { Link, animateScroll as scroll } from "react-scroll"
 import disableScroll from "disable-scroll"
 
 const Nav = styled.header`
@@ -167,31 +167,21 @@ class Header extends Component {
                 <Link to="/" onClick={this.handleClick}>
                   Home
                 </Link>
-                <Link
-                  to="work"
-                  smooth={true}
-                  offset={-40}
-                  onClick={this.handleClick}
-                >
+                <a href="#work" onClick={this.handleClick}>
                   Work
-                </Link>
-                <Link
-                  to="about"
-                  smooth={true}
-                  offset={-40}
-                  onClick={this.handleClick}
-                >
+                </a>
+                <a href="#about" onClick={this.handleClick}>
                   About
-                </Link>
-                <Link
-                  to="contact"
-                  smooth={true}
-                  offset={-40}
+                </a>
+                <a href="#contact" onClick={this.handleClick}>
+                  Contact
+                </a>
+                <a
+                  href={"CV.pdf"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={this.handleClick}
                 >
-                  Contact
-                </Link>
-                <a href={"CV.pdf"} target="_blank" onClick={this.handleClick}>
                   CV
                 </a>
               </MenuOverlay>

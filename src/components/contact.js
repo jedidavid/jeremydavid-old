@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { Flex, Box } from "@rebass/grid"
 import Title from "./title"
 import Button from "./button"
-import Fade from "react-reveal/Fade"
 
 const Container = styled(Box)`
   width: 100%;
@@ -120,42 +119,38 @@ const FlexWrapper = styled(Flex)`
 const Contact = () => (
   <div id="contact" className="section-contact">
     <Container>
-      <Fade>
-        <Title data-num="03">Get in Touch</Title>
-        <p>
-          Hire me? Got a question? Need a website? Send me a message below or
-          email me at
-          <a href="mailto:jeremydb.david@gmail.com">
-            {" "}
-            jeremydb.david@gmail.com{" "}
-          </a>{" "}
-          and I'll respond as soon as possible.
-        </p>
-      </Fade>
+      <Title data-num="03">Get in Touch</Title>
+      <p>
+        Hire me? Got a question? Need a website? Send me a message below or
+        email me at
+        <a href="mailto:jeremydb.david@gmail.com">
+          {" "}
+          jeremydb.david@gmail.com{" "}
+        </a>{" "}
+        and I'll respond as soon as possible.
+      </p>
       <FlexWrapper flexWrap="wrap">
         <Box width={1}>
-          <Fade>
-            <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-            >
-              <Flex flexDirection="column">
-                <input type="hidden" name="bot-field" />
-                <input type="hidden" name="form-name" value="contact" />
-                <Input type="text" name="name" placeholder="Name" />
-                <Input type="email" name="email" placeholder="Email" required />
-                <Textarea
-                  name="message"
-                  rows="10"
-                  placeholder="Message"
-                  required
-                />
-                <Button type="submit">Submit</Button>
-              </Flex>
-            </form>
-          </Fade>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <Flex flexDirection="column">
+              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="form-name" value="contact" />
+              <Input type="text" name="name" placeholder="Name" />
+              <Input type="email" name="email" placeholder="Email" required />
+              <Textarea
+                name="message"
+                rows="10"
+                placeholder="Message"
+                required
+              />
+              <Button type="submit">Submit</Button>
+            </Flex>
+          </form>
         </Box>
       </FlexWrapper>
     </Container>

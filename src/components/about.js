@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { Flex, Box } from "@rebass/grid"
 import Title from "./title"
-import Fade from "react-reveal/Fade"
 const Container = styled(Box)`
   width: 100%;
   @media screen and (min-width: 1450px) {
@@ -105,36 +104,32 @@ FlexContainer.defaultProps = {
 const About = () => (
   <div id="about" className="section-about">
     <Container>
-      <Fade>
-        <Title data-num="02">About Me</Title>
-        <p>
-          Hi, I'm Jeremy. A graduate of Computer Science and currently working
-          as a freelance web developer. I am solution oriented and flexible who
-          thrives in challenging problems and enjoys working on projects. I am
-          passionate about the digital world and constantly learning from new
-          technologies to improve my skills.
-        </p>
-      </Fade>
+      <Title data-num="02">About Me</Title>
+      <p>
+        Hi, I'm Jeremy. A graduate of Computer Science and currently working as
+        a freelance web developer. I am solution oriented and flexible who
+        thrives in challenging problems and enjoys working on projects. I am
+        passionate about the digital world and constantly learning from new
+        technologies to improve my skills.
+      </p>
     </Container>
 
     <FlexContainer>
-      <Fade>
-        <h3>Technologies I work with:</h3>
-        <img src={require("../images/html.svg")} alt="" />
-        <img src={require("../images/css.svg")} alt="" />
-        <img src={require("../images/javascript.svg")} alt="" />
-        <img src={require("../images/sass.svg")} alt="" />
-        <img src={require("../images/bootstrap.svg")} alt="" />
-        <img src={require("../images/jquery.svg")} alt="" />
-        <img src={require("../images/react.svg")} alt="" />
-        <img src={require("../images/gatsby.svg")} alt="" />
-        <img src={require("../images/git.svg")} alt="" />
-        <img src={require("../images/php.svg")} alt="" />
-        <img src={require("../images/wordpress.svg")} alt="" />
-        <img src={require("../images/shopify.svg")} alt="" />
-        <img src={require("../images/nodejs.svg")} alt="" />
-        <img src={require("../images/mongodb.svg")} alt="" />
-      </Fade>
+      <h3>Technologies I work with:</h3>
+      <img src={require("../images/html.svg")} alt="" />
+      <img src={require("../images/css.svg")} alt="" />
+      <img src={require("../images/javascript.svg")} alt="" />
+      <img src={require("../images/sass.svg")} alt="" />
+      <img src={require("../images/bootstrap.svg")} alt="" />
+      <img src={require("../images/jquery.svg")} alt="" />
+      <img src={require("../images/react.svg")} alt="" />
+      <img src={require("../images/gatsby.svg")} alt="" />
+      <img src={require("../images/git.svg")} alt="" />
+      <img src={require("../images/php.svg")} alt="" />
+      <img src={require("../images/wordpress.svg")} alt="" />
+      <img src={require("../images/shopify.svg")} alt="" />
+      <img src={require("../images/nodejs.svg")} alt="" />
+      <img src={require("../images/mongodb.svg")} alt="" />
     </FlexContainer>
   </div>
 )

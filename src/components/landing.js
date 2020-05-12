@@ -4,7 +4,6 @@ import { Flex, Box } from "@rebass/grid"
 import Button from "./button"
 import { jumping } from "./animations"
 import dev from "../images/developer1.svg"
-import { Link, animateScroll as scroll } from "react-scroll"
 
 const theme = {
   breakpoints: ["62em", "75em"],
@@ -133,9 +132,9 @@ const Home = () => (
                 <span>and a lot of coffee.</span>
               </h1>
             </Tagline>
-            <Link to="work" smooth={true}>
+            <a href="#work">
               <Button>View my works</Button>
-            </Link>
+            </a>
           </Box>
           <Box width={[1, 1 / 2]} order={[1, 2]}>
             <HeroImg src={dev} alt="" />
