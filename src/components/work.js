@@ -78,6 +78,13 @@ const Work = () => {
           }
         }
       }
+      image6: file(relativePath: { eq: "purepearls.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   `)
 
@@ -120,6 +127,12 @@ const Work = () => {
                 subtitle="Frontend Development"
                 imgSrc={data.image5.childImageSharp.fluid}
                 link="https://www.tach-group.com"
+              />
+              <Works
+                projectName="Pure Pearls"
+                subtitle="Shopify"
+                imgSrc={data.image6.childImageSharp.fluid}
+                link="https://www.purepearls.com"
               />
             </RightBox>
           </Flex>
