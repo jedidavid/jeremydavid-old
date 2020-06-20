@@ -107,10 +107,10 @@ const About = () => (
       <Title data-num="02">About Me</Title>
       <p>
         Hi, I'm Jeremy. A graduate of Computer Science and currently working as
-        a freelance web developer. I am solution oriented and flexible who
-        thrives in challenging problems and enjoys working on projects. I am
-        passionate about the digital world and constantly learning from new
-        technologies to improve my skills.
+        a Fullstack Developer. I am solution oriented and flexible who thrives
+        in challenging problems and enjoys working on projects. I am passionate
+        about the digital world and constantly learning from new technologies to
+        improve my skills.
       </p>
     </Container>
 
