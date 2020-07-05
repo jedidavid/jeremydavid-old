@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Web Developer`,
+    title: `Fullstack Developer`,
     description: `This is my portfolio`,
     author: `Jeremy David`,
     url: `https://jeremydavid.netlify.app`,

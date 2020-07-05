@@ -11,7 +11,7 @@ const IndexPage = () => (
     <Layout>
       <SEO
         title="Jeremy David"
-        keywords={[`Jeremy David`, "Web Developer", "Portfolio"]}
+        keywords={[`Jeremy David`, "Web Developer", "Fullstack Developer" "Portfolio",]}
       />
       <Landing />
       <Works />
